@@ -19,17 +19,21 @@ Module MultiplicationTable
         Dim input As String
         Dim goodData As Boolean
 
-
+        'Set the window size of the console so the table fits inside it. 
         Console.SetWindowSize(100, 40)
+
         Do
             Console.WriteLine("Enter a number for a multiplication table Or press Q to quit.")
             Try
-                Input = Console.ReadLine()
+                input = Console.ReadLine()
+                'CInt(input) converts the input into a number.
                 numberInput = CInt(input)
 
 
                 If numberInput < 13 And numberInput > 0 Then
+                    'goodData = True is a boolean flag used to catch errors.
                     goodData = True
+                    My.Computer.Audio.Play(My.Resources.OOT_PressStart, AudioPlayMode.Background)
 
                 ElseIf numberInput > 12 Or numberInput < 1 Then
                     Console.Clear()
@@ -45,6 +49,7 @@ Module MultiplicationTable
                     Exit Sub
                 End If
 
+                'goodData = False is a boolean flag used to catch errors.
                 goodData = False
                 My.Computer.Audio.Play(My.Resources.OOT_Error, AudioPlayMode.Background)
                 Console.WriteLine("Only numbers 1 to 12 will work...")
@@ -58,9 +63,13 @@ Module MultiplicationTable
 
         Console.WriteLine("Enjoy your " & numberInput & "X" & numberInput & " Multiplication Table.")
 
+        'Section below creates the Table based off of number input.
+
         For Column = 1 To numberInput
 
-            For Row = 1 To numberInput
+            For row = 1 To numberInput
+
+                'table(row,column) = row * column creates the numbers and dimensions of the table.
 
                 table(row, column) = row * column
                 Console.Write(table(row, column) & vbTab)

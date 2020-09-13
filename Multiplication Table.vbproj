@@ -109,5 +109,8 @@
   <ItemGroup>
     <None Include="Resources\OOT_Error.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OOT_PressStart.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

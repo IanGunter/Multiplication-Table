@@ -68,5 +68,14 @@ Namespace My.Resources
                 Return ResourceManager.GetStream("OOT_Error", resourceCulture)
             End Get
         End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property OOT_PressStart() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("OOT_PressStart", resourceCulture)
+            End Get
+        End Property
     End Module
 End Namespace
