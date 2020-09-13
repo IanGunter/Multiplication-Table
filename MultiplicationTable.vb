@@ -1,5 +1,6 @@
 ﻿'Ian Gunter
 'RCET 0265
+'Multiplication Table
 'Fall 2020
 'https://github.com/IanGunter/Multiplication-Table.git
 
