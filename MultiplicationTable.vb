@@ -8,8 +8,6 @@ Option Explicit On
 Option Strict On
 Option Compare Text
 
-
-
 Module MultiplicationTable
 
     Sub Main()
@@ -29,7 +27,6 @@ Module MultiplicationTable
                 input = Console.ReadLine()
                 'CInt(input) converts the input into a number.
                 numberInput = CInt(input)
-
 
                 If numberInput < 13 And numberInput > 0 Then
                     'goodData = True is a boolean flag used to catch errors.
@@ -57,10 +54,8 @@ Module MultiplicationTable
                 Console.ReadLine()
                 Console.Clear()
 
-
             End Try
         Loop Until goodData = True
-
 
         Console.WriteLine("Enjoy your " & numberInput & "X" & numberInput & " Multiplication Table.")
 
@@ -69,9 +64,7 @@ Module MultiplicationTable
         For Column = 1 To numberInput
 
             For row = 1 To numberInput
-
-                'table(row,column) = row * column creates the numbers and dimensions of the table.
-
+                'remove commented code - TJR
                 table(row, column) = row * column
                 Console.Write(table(row, column) & vbTab)
 
